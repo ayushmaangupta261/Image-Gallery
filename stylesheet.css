@@ -84,12 +84,12 @@
 @media (max-width:1279px){
 
   .card{
-    filter: drop-shadow(0 0 10px #333);
+   
     width:80%
   }
 .card img{
 
-  height: 100%;
+ width:100%;
   
 }
 
