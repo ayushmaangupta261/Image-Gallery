@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper {
+  /* height: 100vh; */
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  /* background-image: linear-gradient(to right, #bdc3c7,#2c3e50); */
+  background-image: linear-gradient(to bottom, #2b5876,#4e4376);
+}
+.container {
+  height: 100%;
+  max-width: 1200px;
+  /* margin auto sets margin in such a way that the object is centered */
+  margin: 0 auto;
+  padding: 20px;
+  
+
+}
+
+.container h1 {
+  margin: 20px 0;
+  text-align: center;
+  /* margin-bottom: 20px; */
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.gallery {
+  display: flex;
+  /* Since flexx has horizontal axis as its main axis so all images will get arranged in that direstion....so we use flex wrap */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 32%;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  /* justify-content: space-around; */
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  box-shadow: 0 0 20px #333;
+  object-fit: cover;
+}
+.card:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 10px #333);
+  transition: 0.3;
+}
+.card:hover img {
+  filter: grayscale(0%);
+}
+
+.card figcaption {
+  position: absolute;
+  bottom: 0;
+  /* top: 0; */
+  padding: 25px;
+  width: 100%;
+  height: 30%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0;
+  border-radius: 0 0 10px 10px;
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255) 100%); */
+  transition: 0.2s;
+}
+.card:hover figcaption {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+@media (max-width:1279px){
+
+  .card{
+    filter: drop-shadow(0 0 10px #333);
+    width:80%
+  }
+.card img{
+  filter: grayscale(0%);
+  height: 100%;
+  width: 100%;
+}
+
+.gallery{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+}
+
+
+
